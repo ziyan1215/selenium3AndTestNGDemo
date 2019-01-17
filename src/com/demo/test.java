@@ -9,22 +9,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.WebDriverWait; 
 
 public class test {
-
+ 
 	//初始化火狐浏览器
 	public  void init() {
 		FirefoxOptions options = new FirefoxOptions();
-		
+		 //设置浏览器路径
 		 options.setBinary("D:\\tools\\Mozilla Firefox54\\firefox.exe");   
+		 //设置驱动程序
 		 System.setProperty("webdriver.gecko.driver","./Drivers/geckodriver.exe");
 		 FirefoxDriver driver = new FirefoxDriver(options);
 		 //JavascriptExecutor jse = (JavascriptExecutor)driver; //加载jquery
-		
 		 String	baseUrl = "http://www.baidu.com";
 		 driver.get(baseUrl);
-		 
 		 driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);//设置页面加载时间
 		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//------元素等待时间（隐式等待）
 	    // driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);//----脚本执行时间
@@ -36,15 +35,11 @@ public class test {
 	     }
 	     date1.click();
 	     WebElement sj =driver.findElement(By.xpath("/html/body/div[18]/div/div/table/tbody/tr[3]/td[4]/a"));
-	     sj.click();
-	     
-	   
-	     
+	     sj.click();     
 	     System.out.println("end");
 	     */
 	     
 	}
-	
 	 private static boolean isPresentElement(WebElement driver,By by)
 	    {
 	        try {
